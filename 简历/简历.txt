@@ -1,6 +1,6 @@
 ÎÒÓÚ17Äê´Ó»ªÖÐ¿Æ¼¼´óÑ§±ÏÒµºó£¬¾ÍÖ°ÓÚÉÏº£»ªÐÅÖ¤È¯µÄC++ºóÌ¨ÑÐ·¢²¿ÃÅ£¬
 ÔÚ»ªÐÅÖ¤È¯¹¤×÷ÆÚ¼ä£¬ÎÒÖ÷Òª¸ºÔðÖ¤È¯½»Ò×APIµÄÊµÏÖ¡£Ö¤È¯½»Ò×½Ó¿ÚÊÇÎªÁËÎªÑÐ·¢²¿ÃÅ£¬²âÊÔÌá¹©¼òµ¥¿ì½ÝµÄ²éÑ¯¹¦ÄÜ¶ø¿ª·¢µÄ£¬ºóÆÚ¿¼ÂÇÍÆÏòÊÐ³¡¡£ÆäÖ÷ÒªÄ¿±ê¾ÍÊÇ¿ìËÙÏìÓ¦£¬½Ó¿Ú¼òµ¥
-¸Ã½Ó¿Ú²ÉÓÃTCP³¤Á¬½Ó´«ÊäprotobufÏûÏ¢Óë·þÎñ¶ËÍ¨ÐÅ£¬ÆäµÇÂ½£¬ÏÂµ¥µÈ·Ç½Ó¿Ú¶¼ÊÇC++11µÄfunctional/bindÐÎÊ½µÄ»Øµ÷·Âº¯Êý£¬·½±ã±àÐ´£¬µ¥Ïß³ÌÄ£ÐÍ
+¸Ã½Ó¿Ú²ÉÓÃTCP³¤Á¬½Ó´«ÊäprotobufÏûÏ¢Óë·þÎñ¶ËÍ¨ÐÅ£¬ÆäµÇÂ½£¬ÏÂµ¥µÈ·Ç×èÈû½Ó¿Ú¶¼ÊÇC++11µÄfunctional/bindÐÎÊ½µÄ»Øµ÷·Âº¯Êý£¬·½±ã±àÐ´£¬µ¥Ïß³ÌÄ£ÐÍ
 ÓÉÓÚ¸ÃapiÖ÷Òª¹¦ÄÜÊ±Ìá¹©²éÑ¯ÏûÏ¢µÄ·µ»Ø½á¹û£¬²¢²»Éæ¼°µ½´ó¹æÄ£µÄ¼ÆËã£¬Òò´ËÊ¹ÓÃµ¥Ïß³ÌÄ£ÐÍ´Â´ÂÓÐÓà¡£
 ÓÉÓÚ²ÉÓÃlibvent×÷Îªµ×²ã£¬Òò´Ë¾ßÓÐÓÅÐãµÄ¿çÆ½Ì¨ÌØÐÔºÍ¸ßÐÔÄÜ
 Ê¹ÓÃvector<char>×÷ÎªÓ¦ÓÃ²ã»º³åÇø£¬¶ÔÍâ±íÏÖÎªÒ»¿éÁ¬ÐøµÄÄÚ´æ(char*£¬ len)£¬·½±ã¿Í»§´úÂë±àÐ´
@@ -15,3 +15,5 @@ dispatcherÊ¹ÓÃmap<string,std::function>callbacks_À´¼ÇÂ¼ÏûÏ¢Ãû¶ÔÓ¦µÄ´¦Àíº¯Êý¡£µ±Ï
 
 ÔÚÍøÂç±à³ÌÖÐÊ¹ÓÃprotobufÐèÒª½â¾ö2¸öÎÊÌâ£º1. ³¤¶È£¬ protobuf ´ò°üµÄÊý¾ÝÃ»ÓÐ×Ô´ø³¤¶ÈÐÅÏ¢»òÖÕ½á·û£¬ÐèÒªÓÉÓ¦ÓÃ³ÌÐò×Ô¼ºÔÚ·¢ÉúºÍ½ÓÊÕµÄÊ±ºò×öÕýÈ·µÄÇÐ·Ö£»
 2. ÀàÐÍ£¬ protobuf ´ò°üµÄÊý¾ÝÃ»ÓÐ×Ô´øÀàÐÍÐÅÏ¢£¬ÐèÒªÓÉ·¢ËÍ·½°ÑÀàÐÍÐÅÏ¢´«¸ø¸ø½ÓÊÕ·½£¬½ÓÊÕ·½´´½¨¾ßÌåµÄ Protobuf Message ¶ÔÏó£¬ÔÙ×öµÄ·´ÐòÁÐ»¯
+
+Ã¿¸öÏß³ÌÖ»ÓÐÒ»¸öÊÂ¼þÑ­»·¶ÔÏó
