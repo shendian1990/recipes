@@ -17,3 +17,31 @@ dispatcherÊ¹ÓÃmap<string,std::function>callbacks_À´¼ÇÂ¼ÏûÏ¢Ãû¶ÔÓ¦µÄ´¦Àíº¯Êı¡£µ±Ï
 2. ÀàĞÍ£¬ protobuf ´ò°üµÄÊı¾İÃ»ÓĞ×Ô´øÀàĞÍĞÅÏ¢£¬ĞèÒªÓÉ·¢ËÍ·½°ÑÀàĞÍĞÅÏ¢´«¸ø¸ø½ÓÊÕ·½£¬½ÓÊÕ·½´´½¨¾ßÌåµÄ Protobuf Message ¶ÔÏó£¬ÔÙ×öµÄ·´ĞòÁĞ»¯
 
 Ã¿¸öÏß³ÌÖ»ÓĞÒ»¸öÊÂ¼şÑ­»·¶ÔÏó
+
+
+ReactorÄ£Ê½Ê×ÏÈÊÇÊÂ¼şÇı¶¯µÄ£¬ÓĞÒ»¸ö»ò¶à¸ö²¢·¢ÊäÈëÔ´£¬ÓĞÒ»¸öService Handler£¬ÓĞ¶à¸öRequest Handlers¡£Õâ¸öService Handler»áÍ¬²½µÄ½«ÊäÈëµÄÇëÇó£¨Event£©¶àÂ·¸´ÓÃµÄ·Ö·¢¸øÏàÓ¦µÄRequest Handler
+Handle£ºÓÉÓÚReactorÄ£Ê½Ò»°ãÊ¹ÓÃÔÚÍøÂç±à³ÌÖĞ£¬Òò¶øÕâÀïÒ»°ãÖ¸Socket Handle£¬¼´Ò»¸öÍøÂçÁ¬½Ó£¨Connection£¬ÔÚJava NIOÖĞµÄChannel£©¡£Õâ¸öChannel×¢²áµ½Synchronous Event DemultiplexerÖĞ£¬ÒÔ¼àÌıHandleÖĞ·¢ÉúµÄÊÂ¼ş£¬¶ÔServerSocketChannnel¿ÉÒÔÊÇCONNECTÊÂ¼ş£¬¶ÔSocketChannel¿ÉÒÔÊÇREAD¡¢WRITE¡¢CLOSEÊÂ¼şµÈ¡£
+Synchronous Event Demultiplexer£º×èÈûµÈ´ıÒ»ÏµÁĞµÄHandleÖĞµÄÊÂ¼şµ½À´£¬Èç¹û×èÈûµÈ´ı·µ»Ø£¬¼´±íÊ¾ÔÚ·µ»ØµÄHandleÖĞ¿ÉÒÔ²»×èÈûµÄÖ´ĞĞ·µ»ØµÄÊÂ¼şÀàĞÍ¡£Õâ¸öÄ£¿éÒ»°ãÊ¹ÓÃ²Ù×÷ÏµÍ³µÄselectÀ´ÊµÏÖ¡£ÔÚJava NIOÖĞÓÃSelectorÀ´·â×°£¬µ±Selector.select()·µ»ØÊ±£¬¿ÉÒÔµ÷ÓÃSelectorµÄselectedKeys()·½·¨»ñÈ¡Set<SelectionKey>£¬Ò»¸öSelectionKey±í´ïÒ»¸öÓĞÊÂ¼ş·¢ÉúµÄChannelÒÔ¼°¸ÃChannelÉÏµÄÊÂ¼şÀàĞÍ¡£ÉÏÍ¼µÄ¡°Synchronous Event Demultiplexer ---notifies--> Handle¡±µÄÁ÷³ÌÈç¹ûÊÇ¶ÔµÄ£¬ÄÇÄÚ²¿ÊµÏÖÓ¦¸ÃÊÇselect()·½·¨ÔÚÊÂ¼şµ½À´ºó»áÏÈÉèÖÃHandleµÄ×´Ì¬£¬È»ºó·µ»Ø¡£
+Initiation Dispatcher£ºÓÃÓÚ¹ÜÀíEvent Handler£¬¼´EventHandlerµÄÈİÆ÷£¬ÓÃÒÔ×¢²á¡¢ÒÆ³ıEventHandlerµÈ£»ÁíÍâ£¬Ëü»¹×÷ÎªReactorÄ£Ê½µÄÈë¿Úµ÷ÓÃSynchronous Event DemultiplexerµÄselect·½·¨ÒÔ×èÈûµÈ´ıÊÂ¼ş·µ»Ø£¬µ±×èÈûµÈ´ı·µ»ØÊ±£¬¸ù¾İÊÂ¼ş·¢ÉúµÄHandle½«Æä·Ö·¢¸ø¶ÔÓ¦µÄEvent Handler´¦Àí£¬¼´»Øµ÷EventHandlerÖĞµÄhandle_event()·½·¨¡£
+Event Handler£º¶¨ÒåÊÂ¼ş´¦Àí·½·¨£ºhandle_event()£¬ÒÔ¹©InitiationDispatcher»Øµ÷Ê¹ÓÃ¡£
+Concrete Event Handler£ºÊÂ¼şEventHandler½Ó¿Ú£¬ÊµÏÖÌØ¶¨ÊÂ¼ş´¦ÀíÂß¼­¡£
+
+Reactor£º·´Ó¦Æ÷£¬¶¨ÒåÒ»¸ö½Ó¿Ú£¬ÊµÏÖÒÔÏÂ¹¦ÄÜ£º
+1£©¹©Ó¦ÓÃ³ÌĞò×¢²áºÍÉ¾³ı¹Ø×¢µÄÊÂ¼ş¾ä±ú£»
+2£©ÔËĞĞÊÂ¼şÑ­»·£»
+3£©ÓĞ¾ÍĞ÷ÊÂ¼şµ½À´Ê±£¬·Ö·¢ÊÂ¼şµ½Ö®Ç°×¢²áµÄ»Øµ÷º¯ÊıÉÏ´¦Àí£»
+
+
+ReactorÄ£Ê½Ïê½â
+
+ÓÅµã
+
+1£©ÏìÓ¦¿ì£¬²»±ØÎªµ¥¸öÍ¬²½Ê±¼äËù×èÈû£¬ËäÈ»Reactor±¾ÉíÒÀÈ»ÊÇÍ¬²½µÄ£» 
+2£©±à³ÌÏà¶Ô¼òµ¥£¬¿ÉÒÔ×î´ó³Ì¶ÈµÄ±ÜÃâ¸´ÔÓµÄ¶àÏß³Ì¼°Í¬²½ÎÊÌâ£¬²¢ÇÒ±ÜÃâÁË¶àÏß³Ì/½ø³ÌµÄÇĞ»»¿ªÏú£» 
+3£©¿ÉÀ©Õ¹ĞÔ£¬¿ÉÒÔ·½±ãµÄÍ¨¹ıÔö¼ÓReactorÊµÀı¸öÊıÀ´³ä·ÖÀûÓÃCPU×ÊÔ´£» 
+4£©¿É¸´ÓÃĞÔ£¬reactor¿ò¼Ü±¾ÉíÓë¾ßÌåÊÂ¼ş´¦ÀíÂß¼­ÎŞ¹Ø£¬¾ßÓĞºÜ¸ßµÄ¸´ÓÃĞÔ£»
+È±µã
+
+1£©Ïà±È´«Í³µÄ¼òµ¥Ä£ĞÍ£¬ReactorÔö¼ÓÁËÒ»¶¨µÄ¸´ÔÓĞÔ£¬Òò¶øÓĞÒ»¶¨µÄÃÅ¼÷£¬²¢ÇÒ²»Ò×ÓÚµ÷ÊÔ¡£ 
+2£©ReactorÄ£Ê½ĞèÒªµ×²ãµÄSynchronous Event DemultiplexerÖ§³Ö£¬±ÈÈçJavaÖĞµÄSelectorÖ§³Ö£¬²Ù×÷ÏµÍ³µÄselectÏµÍ³µ÷ÓÃÖ§³Ö£¬Èç¹ûÒª×Ô¼ºÊµÏÖSynchronous Event Demultiplexer¿ÉÄÜ²»»áÓĞÄÇÃ´¸ßĞ§¡£ 
+3£© ReactorÄ£Ê½ÔÚIO¶ÁĞ´Êı¾İÊ±»¹ÊÇÔÚÍ¬Ò»¸öÏß³ÌÖĞÊµÏÖµÄ£¬¼´Ê¹Ê¹ÓÃ¶à¸öReactor»úÖÆµÄÇé¿öÏÂ£¬ÄÇĞ©¹²ÏíÒ»¸öReactorµÄChannelÈç¹û³öÏÖÒ»¸ö³¤Ê±¼äµÄÊı¾İ¶ÁĞ´£¬»áÓ°ÏìÕâ¸öReactorÖĞÆäËûChannelµÄÏàÓ¦Ê±¼ä£¬±ÈÈçÔÚ´óÎÄ¼ş´«ÊäÊ±£¬IO²Ù×÷¾Í»áÓ°ÏìÆäËûClientµÄÏàÓ¦Ê±¼ä£¬Òò¶ø¶ÔÕâÖÖ²Ù×÷£¬Ê¹ÓÃ´«Í³µÄThread-Per-Connection»òĞíÊÇÒ»¸ö¸üºÃµÄÑ¡Ôñ£¬»òÔò´ËÊ±Ê¹ÓÃProactorÄ£Ê½¡£
