@@ -13,12 +13,17 @@ namespace recipes {
 	public:
 		typedef std::function<void()> Functor;
 
-		InvokeTimer(struct event_base* evloop, double timeout_ms, const Functor& f);
+		static InvokeTimer* Create(struct event_base* evloop,
+			double timeout_ms,
+			const Functor& f);
+
+		
 		~InvokeTimer();
 
 		void Start();
 
 	private:
+		InvokeTimer(struct event_base* evloop, double timeout_ms, const Functor& f);
 		void OnTimerTriggered();
 
 	private:
