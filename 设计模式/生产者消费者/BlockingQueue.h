@@ -23,7 +23,7 @@ public:
 		}
 		count_++;
 		queue_.push(value);
-		notEmpty_.notify_one();//通知队列非空，不能用all，读者自行思考为什么
+		notEmpty_.notify_one();//通知队列非空，不能用all，不需要notifyAll通知所有的，如果有阻塞，代表原先为空，现在只生产了一个，也只要一个消费来就足够了
 	}
 	T get()
 	{

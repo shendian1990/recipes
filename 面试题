@@ -1,0 +1,22 @@
+手写strcpy
+
+char * strcpy( char *strDest, const char *strSrc ) 
+{ 
+assert( (strDest != NULL) && (strSrc != NULL) ); 
+if(strlen(strDest)<strlen(strSrc))
+return NULL; //标准的strcpy函数没有此判断
+char *address = strDest; 
+while( (*strDest++ = * strSrc++) != ‘\0’ ); 
+*strDest='\0'; //标准的strcpy函数没有此***作
+return address;
+}
+
+浏览器中输入一个URL发生什么
+    首先在应用层进行DNS解析，先从本地DNS缓存找，如果没有找到就访问DNS服务器（递归和迭代两种方式）
+    用DNS解析出ip以后在应用层发送http请求
+    然后在传输层tcp三次握手建立连接，然后传输数据
+    在网络层使用IP协议来传输分割好的tcp数据包数据，使用ARP协议根据ip得到mac地址
+    找到mac地址后把数据发送到数据链路层进行传输
+    接受方在数据链路层收到数据后把数据一层一层的往上传，一直传到应用层
+    然后服务器响应请求，返回html文件
+    浏览器收到服务器返回的文件以后进行页面渲染

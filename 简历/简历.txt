@@ -1,9 +1,9 @@
 ÎÒÓÚ17Äê´Ó»ªÖÐ¿Æ¼¼´óÑ§±ÏÒµºó£¬¾ÍÖ°ÓÚÉÏº£»ªÐÅÖ¤È¯µÄC++ºóÌ¨ÑÐ·¢²¿ÃÅ£¬
 ÔÚ»ªÐÅÖ¤È¯¹¤×÷ÆÚ¼ä£¬ÎÒÖ÷Òª¸ºÔðÖ¤È¯½»Ò×APIµÄÊµÏÖ¡£Ö¤È¯½»Ò×½Ó¿ÚÊÇÎªÁËÎªÑÐ·¢²¿ÃÅ£¬²âÊÔÌá¹©¼òµ¥¿ì½ÝµÄ²éÑ¯¹¦ÄÜ¶ø¿ª·¢µÄ£¬ºóÆÚ¿¼ÂÇÍÆÏòÊÐ³¡¡£ÆäÖ÷ÒªÄ¿±ê¾ÍÊÇ¿ìËÙÏìÓ¦£¬½Ó¿Ú¼òµ¥
-¸Ã½Ó¿Ú²ÉÓÃTCP³¤Á¬½Ó´«ÊäprotobufÏûÏ¢Óë·þÎñ¶ËÍ¨ÐÅ£¬ÆäµÇÂ½£¬ÏÂµ¥µÈ·Ç×èÈû½Ó¿Ú¶¼ÊÇC++11µÄfunctional/bindÐÎÊ½µÄ»Øµ÷·Âº¯Êý£¬·½±ã±àÐ´£¬µ¥Ïß³ÌÄ£ÐÍ
+¸Ã½Ó¿Ú²ÉÓÃTCP³¤Á¬½Ó´«ÊäprotobufÏûÏ¢Óë·þÎñ¶ËÍ¨ÐÅ£¬ÆäµÇÂ½£¬ÏÂµ¥µÈ·Ç×èÈû½Ó¿Ú¶¼ÊÇC++11µÄfunctional/bindÐÎÊ½µÄ»Øµ÷·Âº¯Êý£¬·½±ã±àÐ´£¬ÓÉÓÚ¸Ã³ÌÐò²¢Î´Éæ¼°µ½´ó¹æÄ£¼ÆËã£¬Òò´Ë²ÉÓÃµÄµÄµ¥Ïß³ÌÊÂ¼þÇý¶¯Ä£ÐÍ
 ÓÉÓÚ¸ÃapiÖ÷Òª¹¦ÄÜÊ±Ìá¹©²éÑ¯ÏûÏ¢µÄ·µ»Ø½á¹û£¬²¢²»Éæ¼°µ½´ó¹æÄ£µÄ¼ÆËã£¬Òò´ËÊ¹ÓÃµ¥Ïß³ÌÄ£ÐÍ´Â´ÂÓÐÓà¡£
 ÓÉÓÚ²ÉÓÃlibvent×÷Îªµ×²ã£¬Òò´Ë¾ßÓÐÓÅÐãµÄ¿çÆ½Ì¨ÌØÐÔºÍ¸ßÐÔÄÜ
-Ê¹ÓÃvector<char>×÷ÎªÓ¦ÓÃ²ã»º³åÇø£¬¶ÔÍâ±íÏÖÎªÒ»¿éÁ¬ÐøµÄÄÚ´æ(char*£¬ len)£¬·½±ã¿Í»§´úÂë±àÐ´
+Ê¹ÓÃvector<char>×÷ÎªÓ¦ÓÃ²ã»º³åÇø£¬¶ÔÍâ±íÏÖÎªÒ»¿éÁ¬ÐøµÄÄÚ´æ(char*£¬ len)£¬·½±ãÉÏ²ãÓ¦ÓÃ´úÂë±àÐ´
 Æäsize()¿ÉÒÔ×Ô¶¯Ôö³¤£¬ÒÔÊÊÓ¦²»Í¬´óÐ¡µÄÏûÏ¢£¬Ëû²»ÊÇÒ»¸ö¶¨³¤Êý×é
 ÊµÏÖÁË»ùÓÚprotobufµÄ±à½âÂëÆ÷ºÍÏûÏ¢·Ö·¢¹¦ÄÜ£¬¼´½ÓÊÕ·½ÊÕµ½ProtobufÏûÏ¢Êý¾Ýºó×Ô¶¯´´½¨Protobuf Message¶ÔÏó
 Google Protobuf ±¾Éí¾ßÓÐºÜÇ¿µÄ·´Éä (reflection) ¹¦ÄÜ£¬¿ÉÒÔ¸ù¾Ý ÏûÏ¢Ãû´´½¨¾ßÌåÀàÐÍµÄ Message ¶ÔÏó¡£
@@ -17,7 +17,8 @@ dispatcherÊ¹ÓÃmap<string,std::function>callbacks_À´¼ÇÂ¼ÏûÏ¢Ãû¶ÔÓ¦µÄ´¦Àíº¯Êý¡£µ±Ï
 ºóÀ´À´µ½ÁË´óÁ¬·É´´ÐÅÏ¢¼¼Êõ¹«Ë¾£¬ÔÚÕâ±ßÖ÷Òª¸ºÔðÎ¬»¤ÏÖÓÐAPIÎÈ¶¨£¬ÒÔ¼°´¦ÀíÒµÎñÂß¼­·½ÃæµÄÈÎÎñ£¬ÔÚÕâ¶ÎÊ±¼ä£¬ÎÒ¶Ôc++ÓïÑÔÓÐÁË¸üÉîÈëµÄÀí½â
 ¶Ô¶àÏß³ÌreactorÄ£ÐÍµÄÍøÂç¿âÄ£ÐÍÓÐÒ»¶¨µÄÁË½â
 
-×Ô¼ºÕâÁ½ÄêÖ÷ÒªÊ¹ÓÃc++ÔÚLinux»·¾³ÏÂ½øÐÐ¿Í»§¶Ë·þÎñ¶ËÒµÎñ±à³Ì£¬ÄÜÊ¹ÓÃ»ù±¾µÄ
+¾­¹ýÕâÕâÁ½ÄêµÄlinux c++ ÍøÂç±à³Ì¹ý³Ì£¬ÎÒ¶Ô»ùÓÚÊÂ¼þµÄÍøÂç¿âÔ­ÀíÓÐÒ»¶¨µÄÁË½â£¬Í¬Ê±¶Ôprotobuf±àÂëÔ­ÀíÓÐÒ»¶¨µÄÁË½â
+µÄÖ÷ÒªÊ¹ÓÃc++ÔÚLinux»·¾³ÏÂ½øÐÐ¿Í»§¶Ë·þÎñ¶ËÒµÎñ±à³Ì£¬ÄÜÊ¹ÓÃ»ù±¾µÄ
 
 ÔÚÍøÂç±à³ÌÖÐÊ¹ÓÃprotobufÐèÒª½â¾ö2¸öÎÊÌâ£º1. ³¤¶È£¬ protobuf ´ò°üµÄÊý¾ÝÃ»ÓÐ×Ô´ø³¤¶ÈÐÅÏ¢»òÖÕ½á·û£¬ÐèÒªÓÉÓ¦ÓÃ³ÌÐò×Ô¼ºÔÚ·¢ÉúºÍ½ÓÊÕµÄÊ±ºò×öÕýÈ·µÄÇÐ·Ö£»
 2. ÀàÐÍ£¬ protobuf ´ò°üµÄÊý¾ÝÃ»ÓÐ×Ô´øÀàÐÍÐÅÏ¢£¬ÐèÒªÓÉ·¢ËÍ·½°ÑÀàÐÍÐÅÏ¢´«¸ø¸ø½ÓÊÕ·½£¬½ÓÊÕ·½´´½¨¾ßÌåµÄ Protobuf Message ¶ÔÏó£¬ÔÙ×öµÄ·´ÐòÁÐ»¯
@@ -50,5 +51,39 @@ ReactorÄ£Ê½Ïê½â
 
 1£©Ïà±È´«Í³µÄ¼òµ¥Ä£ÐÍ£¬ReactorÔö¼ÓÁËÒ»¶¨µÄ¸´ÔÓÐÔ£¬Òò¶øÓÐÒ»¶¨µÄÃÅ¼÷£¬²¢ÇÒ²»Ò×ÓÚµ÷ÊÔ¡£ 
 2£©ReactorÄ£Ê½ÐèÒªµ×²ãµÄSynchronous Event DemultiplexerÖ§³Ö£¬±ÈÈçJavaÖÐµÄSelectorÖ§³Ö£¬²Ù×÷ÏµÍ³µÄselectÏµÍ³µ÷ÓÃÖ§³Ö£¬Èç¹ûÒª×Ô¼ºÊµÏÖSynchronous Event Demultiplexer¿ÉÄÜ²»»áÓÐÄÇÃ´¸ßÐ§¡£ 
-3£© ReactorÄ£Ê½ÔÚIO¶ÁÐ´Êý¾ÝÊ±»¹ÊÇÔÚÍ¬Ò»¸öÏß³ÌÖÐÊµÏÖµÄ£¬¼´Ê¹Ê¹ÓÃ¶à¸öReactor»úÖÆµÄÇé¿öÏÂ£¬ÄÇÐ©¹²ÏíÒ»¸öReactorµÄChannelÈç¹û³öÏÖÒ»¸ö³¤Ê±¼äµÄÊý¾Ý¶ÁÐ´£¬»áÓ°ÏìÕâ¸öReactorÖÐÆäËûChannelµÄÏàÓ¦Ê±¼ä£¬±ÈÈçÔÚ´óÎÄ¼þ´«ÊäÊ±£¬IO²Ù×÷¾Í»áÓ°ÏìÆäËûClientµÄÏàÓ¦Ê±¼ä£¬Òò¶ø¶ÔÕâÖÖ²Ù×÷£¬Ê¹ÓÃ´«Í³µÄThread-Per-Connection»òÐíÊÇÒ»¸ö¸üºÃµÄÑ¡Ôñ£¬»òÔò´ËÊ±Ê¹ÓÃProactorÄ£Ê½¡£
+3£© ReactorÄ£Ê½ÔÚIO¶ÁÐ´Êý¾ÝÊ±»¹ÊÇÔÚÍ¬Ò»¸öÏß³ÌÖÐÊµÏÖµÄ£¬¼´Ê¹Ê¹ÓÃ¶à¸öReactor»úÖÆµÄÇé¿öÏÂ£¬
+ÄÇÐ©¹²ÏíÒ»¸öReactorµÄChannelÈç¹û³öÏÖÒ»¸ö³¤Ê±¼äµÄÊý¾Ý¶ÁÐ´£¬»áÓ°ÏìÕâ¸öReactorÖÐÆäËûChannelµÄÏàÓ¦Ê±¼ä£¬
+±ÈÈçÔÚ´óÎÄ¼þ´«ÊäÊ±£¬IO²Ù×÷¾Í»áÓ°ÏìÆäËûClientµÄÏàÓ¦Ê±¼ä£¬Òò¶ø¶ÔÕâÖÖ²Ù×÷£¬Ê¹ÓÃ´«Í³µÄThread-Per-Connection»òÐíÊÇÒ»¸ö¸üºÃµÄÑ¡Ôñ£¬
+»òÔò´ËÊ±Ê¹ÓÃProactorÄ£Ê½¡£
 
+
+IPÊý¾Ý±¨¸÷×Ö¶Î¹¦ÄÜÈçÏÂ£º
+1£©°æ±¾ºÅ£ºÕ¼ÓÃ4Î»¶þ½øÖÆÊý£¬±íÊ¾¸ÃIPÊý¾Ý±¨Ê¹ÓÃµÄIPÐ­Òé°æ±¾¡£Ä¿Ç°InternetÖÐÊ¹ÓÃµÄÖ÷ÒªÊÇTCP/IPÐ­Òé×åÖÐ°æ±¾ºÅÎª4µÄIPÐ­Òé¡£
+
+2£©Í·³¤¶È£ºÕ¼ÓÃ4Î»¶þ½øÖÆÎ»£¬´ËÓòÖ¸³öÕû¸ö±¨Í·µÄ³¤¶È£¨°üÀ¨Ñ¡Ïî£©£¬¸Ã³¤¶ÈÊÇÒÔ32Î»¶þ½øÖÆÊýÎªÒ»¸ö¼ÆÊýµ¥Î»µÄ£¬½ÓÊÕ¶ËÍ¨¹ý´ËÓò¿ÉÒÔ¼ÆËã³ö±¨Í·ÔÚºÎ´¦½áÊø¼°´ÓºÎ´¦¿ªÊ¼¶ÁÊý¾Ý¡£
+ÆÕÍ¨IPÊý¾Ý±¨£¨Ã»ÓÐÈÎºÎÑ¡Ïî£©¸Ã×Ö¶ÎµÄÖµÊÇ5£¨¼´20¸ö×Ö½ÚµÄ³¤¶È
+
+4£©×Ü³¤¶È£ºÕ¼ÓÃ16Î»¶þ½øÖÆÎ»£¬×Ü³¤¶È×Ö¶ÎÊÇÖ¸Õû¸öIPÊý¾Ý±¨µÄ³¤¶È£¨±¨Í·Çø+Êý¾ÝÇø£©£¬ÒÔ×Ö½ÚÎªµ¥Î»¡£ÀûÓÃÍ·²¿³¤¶È×Ö¶ÎºÍ×Ü³¤¶È×Ö¶Î¾Í¿ÉÒÔ¼ÆËã³öIPÊý¾Ý±¨ÖÐÊý¾ÝÄÚÈÝµÄÆðÊ¼Î»ÖÃºÍ³¤¶È¡£
+ÓÉÓÚ¸Ã×Ö¶Î³¤¶ÈÎª16Î»¶þ½øÖÆÊý£¬Òò´ËÀíÂÛÉÏIPÊý¾Ý±¨×î³¤¿É´ï65536¸ö×Ö½Ú£¨ÊÂÊµÉÏÊÜÎïÀíÍøÂçµÄÏÞÖÆ£¬Òª±ÈÕâ¸öÊýÖµÐ¡ºÜ¶à£©¡£
+
+5£©Éú´æÊ±¼ä£¨TTL£¬time to live£©£ºÕ¼ÓÃ8Î»¶þ½øÖÆÎ»£¬ËüÖ¸¶¨ÁËÊý¾Ý±¨¿ÉÒÔÔÚÍøÂçÖÐ´«ÊäµÄ×î³¤Ê±¼ä¡£
+Êµ¼ÊÓ¦ÓÃÖÐ°ÑÉú´æÊ±¼ä×Ö¶ÎÉèÖÃ³ÉÁËÊý¾Ý±¨¿ÉÒÔ¾­¹ýµÄ×î´óÂ·ÓÉÆ÷Êý¡£TTLµÄ³õÊ¼ÖµÓÉÔ´Ö÷»úÉèÖÃ£¨Í¨³£Îª32¡¢64¡¢128»ò256£©£¬
+Ò»µ©¾­¹ýÒ»¸ö´¦ÀíËüµÄÂ·ÓÉÆ÷£¬ËüµÄÖµ¾Í¼õ1¡£µ±¸Ã×Ö¶ÎÎª0Ê±£¬Êý¾Ý±¨¾Í¶ªÆú£¬²¢·¢ËÍICMP±¨ÎÄÍ¨ÖªÔ´Ö÷»ú£¬
+Òò´Ë¿ÉÒÔ·ÀÖ¹½øÈëÒ»¸öÑ­»·»ØÂ·Ê±£¬Êý¾Ý±¨ÎÞÐÝÖ¹µØ´«ÊäÏÂÈ¥¡£
+
+6£©ÉÏ²ãÐ­Òé±êÊ¶£ºÕ¼ÓÃ8Î»¶þ½øÖÆÎ»£¬IPÐ­Òé¿ÉÒÔ³ÐÔØ¸÷ÖÖÉÏ²ãÐ­Òé£¬Ä¿±ê¶Ë¸ù¾ÝÐ­Òé±êÊ¶¾Í¿ÉÒÔ°ÑÊÕµ½µÄIPÊý¾Ý±¨ËÍµ½TCP»òUDPµÈ´¦Àí´Ë±¨ÎÄµÄÉÏ²ãÐ­ÒéÁË¡£
+
+7£©Ð£ÑéºÍ£ºÕ¼ÓÃ16Î»¶þ½øÖÆÊý£¬ÓÃÓÚÐ­ÒéÍ·Êý¾ÝÓÐÐ§ÐÔµÄÐ£Ñé£¬¿ÉÒÔ±£Ö¤IP±¨Í·ÇøÔÚ´«ÊäÊ±µÄÕýÈ·ÐÔºÍÍêÕûÐÔ¡£
+Í·²¿¼ìÑéºÍ×Ö¶ÎÊÇ¸ù¾ÝIPÐ­ÒéÍ·¼ÆËã³öµÄ¼ìÑéºÍ£¬Ëü²»¶ÔÍ·²¿ºóÃæµÄÊý¾Ý½øÐÐ¼ÆËã¡£
+
+8£©Ô´µØÖ·£ºÕ¼ÓÃ32Î»¶þ½øÖÆÊý£¬±íÊ¾·¢ËÍ¶ËIPµØÖ·¡£
+
+9£©Ä¿µÄµØÖ·£ºÕ¼ÓÃ32Î»¶þ½øÖÆÊý£¬±íÊöÄ¿µÄ¶ËIPµØÖ·¡£
+
+Ä¿±ê¶ËÖ÷»úÖØ×éÊý¾Ý±¨µÄÔ­ÀíÊÇ£º
+
+(1)¡ª¸ù¾Ý¡°±êÊ¶¡±×Ö¶Î¿ÉÒÔÈ·¶¨ÊÕµ½µÄ·ÖÆ¬ÊôÓÚÔ­À´ÄÄ¸öIPÊý¾Ý±¨£»
+
+(2)¡ª¸ù¾Ý¡°±êÖ¾¡±×Ö¶ÎµÄ¡°Æ¬Î´ÍêMF¡±×Ó×Ö¶Î¿ÉÒÔÈ·¶¨·ÖÆ¬ÊÇ²»ÊÇ×îºóÒ»¸ö·ÖÆ¬£»
+
+(3)¡ª¸ù¾Ý¡°Æ«ÒÆÁ¿¡±×Ö¶Î¿ÉÒÔÈ·¶¨·ÖÆ¬ÔÚÔ­Êý¾Ý±¨ÖÐµÄÎ»ÖÃ¡£
