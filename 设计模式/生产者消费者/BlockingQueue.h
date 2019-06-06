@@ -12,7 +12,10 @@ class BlockBoundQueue
 public:
 	BlockBoundQueue(size_t bound = _FULL) :bound_(bound) {}
 	BlockBoundQueue(const BlockBoundQueue&) = delete;
+	BlockBoundQueue(BlockBoundQueue&&)= delete;
 	BlockBoundQueue& operator=(const BlockBoundQueue&) = delete;
+	BlockBoundQueue& operator=(BlockBoundQueue&&) = delete;
+	
 	void push(const T& value)
 	{
 		std::unique_lock<std::mutex> lck(mutex_);// 利用RAII技法，将mutex_托管给lck
